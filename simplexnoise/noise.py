@@ -1,7 +1,11 @@
+# Compatibility Python2/3
 from __future__ import division
+from __future__ import absolute_import
+from past.builtins import xrange
+
 import math
 import random
-from geometry import Point
+from .geometry import Point
 
 # Constants to avoid magic numbers
 DEFAULT_NOISE_SCALE = -1  # Check noise_scale against this
@@ -28,8 +32,8 @@ def normalize(x):
 
 
 class PerlinNoise(object):
-    """ 
-        Implementation of 1D Perlin Noise ported from C code: 
+    """
+        Implementation of 1D Perlin Noise ported from C code:
         https://github.com/stegu/perlin-noise/blob/master/src/noise1234.c
     """
 
